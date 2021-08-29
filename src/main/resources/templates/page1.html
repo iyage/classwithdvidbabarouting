@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>page1</title>
+</head>
+<body >
+
+<div style=" margin-top: 200px">
+<div th:each="user:${users}" >
+    <span th:text="'First-Name :'+ ${user.getFirstName()}" style="padding: 5px"></span><span th:text="'Last-Name :'+ ${user.getLastName()}" style="padding: 5px">
+
+</span><span th:text="'Age :'+ ${user.getAge()}" style="padding: 5px"></span><spa><a th:href="@{'/delete/{id}'(id=${user.getId()})}">delete user</a></spa>
+    <spa><a th:href="@{'/viewUser/{id}'(id=${user.getId()})}">Get user</a></spa>
+</div>
+</div>
+
+
+</body>
+</html>
